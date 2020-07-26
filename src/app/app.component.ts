@@ -33,6 +33,8 @@ updateData(){
         
       }
     );
+    this.productName.setValue("");
+    this.quantity.setValue("");
      
   }
 }
