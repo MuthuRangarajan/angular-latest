@@ -1,4 +1,7 @@
+<h2>Demonstration of Built-in directives and data binding</h2>
+ <h3>Products List</h3>
 <table border="1">
+ 
 	<tr>
 		<th>
 			Product Name
@@ -19,9 +22,11 @@
 <br>
 <br>
 <div>
+  <label>Enter Product Name</label>
   <input type="text" [formControl]="productName">
+   <label>Enter Quantity</label>
    <input type="number" [formControl]="quantity">
 
   
-  <button (click)="updateData()">Add row with default values</button>
+  <button (click)="updateData()">Add Product</button>
 </div>

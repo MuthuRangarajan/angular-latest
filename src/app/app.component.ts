@@ -7,21 +7,24 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public rows: { name: string; qty: number; }[]
+  rows: { name: string; qty: number; }[]
  
  productName=new FormControl('');
  quantity=new FormControl('');
 
  constructor() {
    this.rows = [{
-        name: 'default name',
-        qty: 20
+        name: 'Samsung Galaxy',
+        qty: 2
+        
+      },{
+        name: 'RealMe',
+        qty: 3
         
       }];
  }
 
- 
-  public updateData(){
+updateData(){
    
     this.rows.push(
       {
