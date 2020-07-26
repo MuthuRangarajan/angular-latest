@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -7,29 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   public rows: { name: string; qty: number; }[]
- m:string;
+ 
+ productName=new FormControl('');
+ quantity=new FormControl('');
 
  constructor() {
    this.rows = [{
         name: 'default name',
-        qty:2
-      },{
-        name: 'default name',
-        qty:2
+        qty: 20
+        
       }];
-      
  }
 
  
-  public onAddRowClick(): void {
-this.m='m';
-  
+  public updateData(){
+   
     this.rows.push(
       {
-        name: this.m,
-        qty:2
+         name: this.productName.value,
+        qty: this.quantity.value
+        
       }
     );
-     console.log(this.rows)
+     
   }
 }

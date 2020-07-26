@@ -3,30 +3,25 @@
 		<th>
 			Product Name
 		</th>
-
 		<th>
-			Quantity
+		Quantity
 		</th>
-
-		
 	</tr>
 
 	<tr *ngFor="let row of rows">
     <td>{{row.name}}</td>
     <td>{{row.qty}}</td>
-   
+    
   </tr>
 </table>
+
 <br>
 <br>
-<form>
+<br>
+<div>
+  <input type="text" [formControl]="productName">
+   <input type="number" [formControl]="quantity">
+
   
-<button (click)="onAddRowClick()">Add row with default values</button>
-
-</form>
-
-
-<br>
-<br>
-
-<br>
+  <button (click)="updateData()">Add row with default values</button>
+</div>
