@@ -1,0 +1,32 @@
+<table border="1">
+	<tr>
+		<th>
+			Product Name
+		</th>
+
+		<th>
+			Quantity
+		</th>
+
+		
+	</tr>
+
+	<tr *ngFor="let row of rows">
+    <td>{{row.name}}</td>
+    <td>{{row.qty}}</td>
+   
+  </tr>
+</table>
+<br>
+<br>
+<form>
+  
+<button (click)="onAddRowClick()">Add row with default values</button>
+
+</form>
+
+
+<br>
+<br>
+
+<br>
